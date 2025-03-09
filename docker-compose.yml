@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8086:8086"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=production
+      - PORT=8086

@@ -1,0 +1,458 @@
+<!-- Hero Section with animated elements -->
+<section
+  id="hero"
+  class="px-20 py-20 relative overflow-hidden min-h-[60vh] flex items-center"
+>
+  <div class="ml-auto w-full md:w-1/2 text-left">
+    <h1 class="text-5xl md:text-6xl font-bold mb-6 parallax">
+      <span class="text-accent-500" data-speed="5">Hello!</span>
+    </h1>
+
+    <p class="text-left text-xl text-gray-400 max-w-2xl ml-auto parallax">
+      My name is Mads Fjeldberg. I'm a software developer with a passion for
+      building and maintaining web applications. I love learning new
+      technologies and frameworks, and I'm always looking for new challenges.
+      <br />
+      <br />
+      I'm currently working as IT-Support at
+      <a class="text-accent-500" href="https://www.byoghavn.dk/">By & Havn</a>.
+      <br />
+    </p>
+    <div class="mt-4 flex justify-start space-x-6 parallax">
+      <a
+        href="https://github.com/madsfjeldberg"
+        class="text-gray-400 hover:text-accent-500 transition-all duration-100 hover:scale-110 transform"
+        aria-label="GitHub"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg
+          class="h-6 w-6"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/mads-thaulow-fjeldberg-0a23a7294/"
+        class="text-gray-400 hover:text-accent-500 transition-all duration-100 hover:scale-110 transform"
+        aria-label="LinkedIn"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg
+          class="h-6 w-6"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section with hover effects -->
+<section id="projects" class="relative">
+  <div
+    class="absolute -right-20 top-40 w-40 h-40 rounded-full bg-accent-600/5 blur-3xl parallax"
+    data-speed="10"
+  ></div>
+
+  <div class="text-center mb-12 parallax">
+    <h2 class="text-3xl font-bold text-accent-500 mb-4 inline-block relative">
+      Previous Projects
+    </h2>
+    <p class="text-gray-400 max-w-2xl mx-auto"></p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+    <!-- Project Card 1 -->
+    <div class="group relative parallax" data-speed="8">
+      <div
+        class="bg-dark-800 rounded-lg overflow-hidden h-full flex flex-col border border-dark-600/50 group-hover:border-accent-600/50 transition-all duration-300"
+      >
+        <div
+          class="h-48 bg-dark-700 flex items-center justify-center overflow-hidden group-hover:bg-dark-600 transition-all duration-500"
+        >
+          <img
+            class="w-full h-full object-cover text-accent-500 transform transition-transform duration-500 group-hover:scale-110 group-hover:text-accent-400"
+            src="/images/divex.png"
+            alt="Project 1"
+          />
+        </div>
+        <div class="p-6 flex-grow flex flex-col">
+          <h3
+            class="text-xl font-semibold text-accent-400 mb-2 group-hover:text-accent-300 transition-colors"
+          >
+            DivEx
+          </h3>
+          <p class="text-gray-400 mb-4 flex-grow">
+            A web application for managing and tracking stocks and dividends.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 bg-dark-700 text-accent-400 text-xs rounded"
+              >React</span
+            >
+            <span class="px-2 py-1 bg-dark-700 text-accent-400 text-xs rounded"
+              >MySQL</span
+            >
+            <span class="px-2 py-1 bg-dark-700 text-accent-400 text-xs rounded"
+              >MySQL</span
+            >
+            <span class="px-2 py-1 bg-dark-700 text-accent-400 text-xs rounded"
+              >Tailwind CSS</span
+            >
+            <span class="px-2 py-1 bg-dark-700 text-accent-400 text-xs rounded"
+              >shadcn/ui</span
+            >
+          </div>
+          <div class="flex justify-start gap-4">
+            <a
+              href="https://divex.dk"
+              class="inline-block px-4 py-2 bg-dark-700 text-accent-400 rounded group-hover:bg-accent-900 group-hover:text-accent-200 transition-all duration-300 transform group-hover:scale-105"
+              target="_blank"
+              >View Project</a
+            >
+            <a
+              href="https://github.com/madsfjeldberg/DivEx"
+              class="inline-block px-4 py-2 bg-dark-700 text-accent-400 rounded group-hover:bg-accent-900 group-hover:text-accent-200 transition-all duration-300 transform group-hover:scale-105"
+              target="_blank"
+              >View Code</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Card 2 -->
+    <div class="group relative parallax" data-speed="5">
+      <div
+        class="bg-dark-800 rounded-lg overflow-hidden h-full flex flex-col border border-dark-600/50 group-hover:border-accent-600/50 transition-all duration-300"
+      >
+        <div
+          class="h-48 bg-dark-700 flex items-center justify-center overflow-hidden group-hover:bg-dark-600 transition-all duration-500"
+        >
+          <img
+            class="w-full h-full object-cover text-accent-500 transform transition-transform duration-500 group-hover:scale-110 group-hover:text-accent-400"
+            src="/images/nodeportfolio.png"
+            alt="Project 2"
+          />
+        </div>
+        <div class="p-6 flex-grow flex flex-col">
+          <h3
+            class="text-xl font-semibold text-accent-400 mb-2 group-hover:text-accent-300 transition-colors"
+          >
+            NodePortfolio
+          </h3>
+          <p class="text-gray-400 mb-4 flex-grow">
+            A collection of what i've learned in my Fullstack Node.js course.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 bg-dark-700 text-accent-400 text-xs rounded"
+              >Node.js</span
+            >
+            <span class="px-2 py-1 bg-dark-700 text-accent-400 text-xs rounded"
+              >Express</span
+            >
+            <span class="px-2 py-1 bg-dark-700 text-accent-400 text-xs rounded"
+              >ejs</span
+            >
+            <span class="px-2 py-1 bg-dark-700 text-accent-400 text-xs rounded"
+              >Tailwind CSS</span
+            >
+          </div>
+          <div class="flex justify-start gap-4">
+            <a
+              href="https://nodeportfolio.thaulow.tech"
+              class="inline-block px-4 py-2 bg-dark-700 text-accent-400 rounded group-hover:bg-accent-900 group-hover:text-accent-200 transition-all duration-300 transform group-hover:scale-105"
+              target="_blank"
+              >View Project</a
+            >
+            <a
+              href="https://github.com/madsfjeldberg/NodePortfolio"
+              class="inline-block px-4 py-2 bg-dark-700 text-accent-400 rounded group-hover:bg-accent-900 group-hover:text-accent-200 transition-all duration-300 transform group-hover:scale-105"
+              target="_blank"
+              >View Code</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Card 3 -->
+    <div class="group relative parallax" data-speed="7">
+      <div
+        class="bg-dark-800 rounded-lg overflow-hidden h-full flex flex-col border border-dark-600/50 group-hover:border-accent-600/50 transition-all duration-300"
+      >
+        <div
+          class="h-48 bg-dark-700 flex items-center justify-center overflow-hidden group-hover:bg-dark-600 transition-all duration-500"
+        >
+          <svg
+            class="w-16 h-16 text-accent-500 transform transition-transform duration-500 group-hover:scale-110 group-hover:text-accent-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+            ></path>
+          </svg>
+        </div>
+        <div class="p-6 flex-grow flex flex-col">
+          <h3
+            class="text-xl font-semibold text-accent-400 mb-2 group-hover:text-accent-300 transition-colors"
+          >
+            Project Three
+          </h3>
+          <p class="text-gray-400 mb-4 flex-grow">
+            A brief description of this amazing project and the technologies
+            used.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 bg-dark-700 text-accent-400 text-xs rounded"
+              >Angular</span
+            >
+            <span class="px-2 py-1 bg-dark-700 text-accent-400 text-xs rounded"
+              >Firebase</span
+            >
+            <span class="px-2 py-1 bg-dark-700 text-accent-400 text-xs rounded"
+              >Tailwind</span
+            >
+          </div>
+          <a
+            href="#"
+            class="inline-block px-4 py-2 bg-dark-700 text-accent-400 rounded group-hover:bg-accent-900 group-hover:text-accent-200 transition-all duration-300 transform group-hover:-translate-y-1"
+            >View Project</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section with animated cards -->
+<section id="skills" class="py-20 relative">
+  <div
+    class="absolute -left-20 top-1/2 w-40 h-40 rounded-full bg-accent-600/5 blur-3xl parallax"
+    data-speed="12"
+  ></div>
+
+  <div
+    class="relative z-10 bg-dark-800 rounded-xl p-8 border border-dark-600/50 shadow-xl parallax"
+  >
+    <h2 class="text-3xl font-bold text-accent-500 mb-8 text-center">
+      Skills & Technologies
+    </h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      
+      <!-- Skill Card 1 -->
+      <div
+        class="group bg-dark-800 p-5 rounded-lg text-center border border-dark-600/50 hover:border-accent-600/30 transition-all duration-300 hover:shadow-lg hover:shadow-accent-900/10 transform hover:-translate-y-1"
+        data-speed="3"
+      >
+        <div
+          class="text-accent-400 text-4xl mb-3 group-hover:text-accent-300 transition-colors"
+        >
+          <i class="fab fa-java"></i>
+        </div>
+        <h3 class="text-gray-300 group-hover:text-white transition-colors">
+          Java
+        </h3>
+      </div>
+
+      
+      <!-- Skill Card 2 -->
+      <div
+        class="group bg-dark-800 p-5 rounded-lg text-center border border-dark-600/50 hover:border-accent-600/30 transition-all duration-300 hover:shadow-lg hover:shadow-accent-900/10 transform hover:-translate-y-1"
+        data-speed="3"
+      >
+        <div
+          class="text-accent-400 text-4xl mb-3 group-hover:text-accent-300 transition-colors"
+        >
+          <i class="fab fa-js"></i>
+        </div>
+        <h3 class="text-gray-300 group-hover:text-white transition-colors">
+          JavaScript
+        </h3>
+      </div>
+
+      <!-- Skill Card 3 -->
+      <div
+        class="group bg-dark-800 p-5 rounded-lg text-center border border-dark-600/50 hover:border-accent-600/30 transition-all duration-300 hover:shadow-lg hover:shadow-accent-900/10 transform hover:-translate-y-1"
+        data-speed="3"
+      >
+        <div
+          class="text-accent-400 text-4xl mb-3 group-hover:text-accent-300 transition-colors"
+        >
+          <i class="fi fi-brands-typescript"></i>
+        </div>
+        <h3 class="text-gray-300 group-hover:text-white transition-colors">
+          TypeScript
+        </h3>
+      </div>
+
+      <!-- Skill Card 4 -->
+      <div
+        class="group bg-dark-800 p-5 rounded-lg text-center border border-dark-600/50 hover:border-accent-600/30 transition-all duration-300 hover:shadow-lg hover:shadow-accent-900/10 transform hover:-translate-y-1"
+        data-speed="4"
+      >
+        <div
+          class="text-accent-400 text-4xl mb-3 group-hover:text-accent-300 transition-colors"
+        >
+          <i class="fab fa-node-js"></i>
+        </div>
+        <h3 class="text-gray-300 group-hover:text-white transition-colors">
+          Node.js
+        </h3>
+      </div>
+
+      <!-- Skill Card 5 -->
+      <div
+        class="group bg-dark-800 p-5 rounded-lg text-center border border-dark-600/50 hover:border-accent-600/30 transition-all duration-300 hover:shadow-lg hover:shadow-accent-900/10 transform hover:-translate-y-1"
+        data-speed="5"
+      >
+        <div
+          class="text-accent-400 text-4xl mb-3 group-hover:text-accent-300 transition-colors"
+        >
+          <i class="fab fa-react"></i>
+        </div>
+        <h3 class="text-gray-300 group-hover:text-white transition-colors">
+          React / Native
+        </h3>
+      </div>
+
+      <!-- Skill Card 6 -->
+      <div
+        class="group bg-dark-800 p-5 rounded-lg text-center border border-dark-600/50 hover:border-accent-600/30 transition-all duration-300 hover:shadow-lg hover:shadow-accent-900/10 transform hover:-translate-y-1"
+        data-speed="3.5"
+      >
+        <div
+          class="text-accent-400 text-4xl mb-3 group-hover:text-accent-300 transition-colors"
+        >
+          <i class="fab fa-html5"></i>
+        </div>
+        <h3 class="text-gray-300 group-hover:text-white transition-colors">
+          HTML5
+        </h3>
+      </div>
+
+      <!-- Skill Card 7 -->
+      <div
+        class="group bg-dark-800 p-5 rounded-lg text-center border border-dark-600/50 hover:border-accent-600/30 transition-all duration-300 hover:shadow-lg hover:shadow-accent-900/10 transform hover:-translate-y-1"
+        data-speed="3.5"
+      >
+        <div
+          class="text-accent-400 text-4xl mb-3 group-hover:text-accent-300 transition-colors"
+        >
+          <i class="fab fa-css3"></i>
+        </div>
+        <h3 class="text-gray-300 group-hover:text-white transition-colors">
+          Tailwind CSS
+        </h3>
+      </div>
+
+      <!-- Skill Card 8 -->
+      <div
+        class="group bg-dark-800 p-5 rounded-lg text-center border border-dark-600/50 hover:border-accent-600/30 transition-all duration-300 hover:shadow-lg hover:shadow-accent-900/10 transform hover:-translate-y-1"
+        data-speed="3.5"
+      >
+        <div
+          class="text-accent-400 text-4xl mb-3 group-hover:text-accent-300 transition-colors"
+        >
+          <i class="fi fi-brands-mysql"></i>
+        </div>
+        <h3 class="text-gray-300 group-hover:text-white transition-colors">
+          MySQL
+        </h3>
+      </div>
+
+      <!-- Skill Card 9 -->
+      <div
+        class="group bg-dark-800 p-5 rounded-lg text-center border border-dark-600/50 hover:border-accent-600/30 transition-all duration-300 hover:shadow-lg hover:shadow-accent-900/10 transform hover:-translate-y-1"
+        data-speed="3.5"
+      >
+        <div
+          class="text-accent-400 text-4xl mb-3 group-hover:text-accent-300 transition-colors"
+        >
+          <i class="fa-brands fa-rust"></i>
+        </div>
+        <h3 class="text-gray-300 group-hover:text-white transition-colors">
+          Rust
+        </h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 relative min-h-screen">
+  <div
+    class="absolute -right-20 bottom-20 w-40 h-40 rounded-full bg-accent-600/5 blur-3xl parallax"
+    data-speed="15"
+  ></div>
+
+  <div class="text-center mb-12">
+    <h2 class="text-3xl font-bold text-accent-500 mb-4 inline-block relative">
+      Get In Touch
+      <div
+        class="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-accent-600 rounded-full"
+      ></div>
+    </h2>
+    <p class="text-gray-400 max-w-2xl mx-auto">
+      Have a project in mind or just want to say hello? Feel free to reach out!
+    </p>
+  </div>
+
+  <div class="max-w-2xl mx-auto">
+    <div
+      class="bg-dark-800 rounded-lg p-6 border border-dark-600/50 shadow-lg parallax"
+      data-speed="4"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div>
+          <label class="block text-gray-400 mb-2">Name</label>
+          <input
+            type="text"
+            class="w-full bg-dark-700 border border-dark-600 rounded-md px-4 py-2 text-gray-200 focus:outline-none focus:border-accent-500 transition-colors"
+          />
+        </div>
+        <div>
+          <label class="block text-gray-400 mb-2">Email</label>
+          <input
+            type="email"
+            class="w-full bg-dark-700 border border-dark-600 rounded-md px-4 py-2 text-gray-200 focus:outline-none focus:border-accent-500 transition-colors"
+          />
+        </div>
+      </div>
+      <div class="mb-6">
+        <label class="block text-gray-400 mb-2">Message</label>
+        <textarea
+          rows="4"
+          class="w-full bg-dark-700 border border-dark-600 rounded-md px-4 py-2 text-gray-200 focus:outline-none focus:border-accent-500 transition-colors"
+        ></textarea>
+      </div>
+      <button
+        class="w-full bg-accent-600 text-white py-3 rounded-md hover:bg-accent-700 transition-colors shadow-lg hover:shadow-accent-900/20"
+      >
+        Send Message
+      </button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Flaticon Icons -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+  </head>
+  <body
+    class="bg-dark-950 text-gray-200 min-h-screen flex flex-col relative overflow-x-hidden"
+  >
+    <%- include('../partials/header') %>
+
+    <main class="flex-grow relative z-10">
+      <div class="container mx-auto px-4 py-8"><%- content %></div>
+    </main>
+
+    <%- include('../partials/footer') %>
+
+    <!-- Add Three.js and Vanta.js from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
+    <!-- Add custom JavaScript for dynamic effects -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Create a fixed background div for VANTA
+        const backgroundDiv = document.createElement("div");
+        backgroundDiv.id = "vanta-background";
+        backgroundDiv.style.position = "fixed";
+        backgroundDiv.style.top = "0";
+        backgroundDiv.style.left = "0";
+        backgroundDiv.style.width = "100%";
+        backgroundDiv.style.height = "100%";
+        backgroundDiv.style.zIndex = "-1";
+        document.body.prepend(backgroundDiv);
+
+        // Initialize VANTA.DOTS on the fixed background div
+        VANTA.DOTS({
+          el: "#vanta-background",
+          mouseControls: true,
+          touchControls: false,
+          gyroControls: false,
+          minHeight: 100.0,
+          minWidth: 100.0,
+          scale: 1,
+          scaleMobile: 1.0,
+          color: 0xf97316, // Orange accent color
+          color2: 0x1e40af, // Secondary color
+          backgroundColor: 0x121212, // Dark background
+          size: 1,
+          spacing: 20,
+          showLines: false,
+          speed: 0.2, // Slow speed for more static appearance
+        });
+
+        // Add fade-in class to all sections except hero
+        const allSections = document.querySelectorAll("section");
+        allSections.forEach((section) => {
+          if (section.id === "hero") {
+            // Make hero section visible immediately
+            section.classList.add("fade-in-section", "is-visible");
+          } else {
+            // Other sections start invisible
+            section.classList.add("fade-in-section");
+          }
+        });
+
+        // Simple function to check if element is in viewport
+        function checkFadeInSections() {
+          const sections = document.querySelectorAll(
+            ".fade-in-section:not(.is-visible)"
+          );
+          sections.forEach((section) => {
+            // Get element position relative to viewport
+            const rect = section.getBoundingClientRect();
+            const windowHeight =
+              window.innerHeight || document.documentElement.clientHeight;
+
+            // Simple check - when section top is in the bottom half of the screen
+            if (rect.top < windowHeight * 0.8) {
+              section.classList.add("is-visible");
+            }
+          });
+        }
+
+        // Check initially and on scroll
+        checkFadeInSections();
+        window.addEventListener("scroll", checkFadeInSections);
+
+        // Enhanced parallax effect for elements with .parallax class
+        window.addEventListener("mousemove", function (e) {
+          const parallaxElements = document.querySelectorAll(".parallax");
+
+          // Calculate mouse position relative to the center of the screen
+          const mouseX = (e.clientX / window.innerWidth - 0.5) * 2; // -1 to 1
+          const mouseY = (e.clientY / window.innerHeight - 0.5) * 2; // -1 to 1
+
+          parallaxElements.forEach((el) => {
+            // Get the speed attribute or use a default
+            const speedX = parseFloat(
+              el.getAttribute("data-speed-x") ||
+                el.getAttribute("data-speed") ||
+                15
+            );
+            const speedY = parseFloat(
+              el.getAttribute("data-speed-y") ||
+                el.getAttribute("data-speed") ||
+                15
+            );
+
+            // Apply the transform with different speeds for X and Y
+            const x = mouseX * speedX;
+            const y = mouseY * speedY;
+
+            // Apply a subtle rotation for more dynamic effect
+            const rotateX = mouseY * 2; // subtle rotation
+            const rotateY = -mouseX * 2; // subtle rotation
+
+            // Apply the transform
+            el.style.transform = `translate3d(${x}px, ${y}px, 0) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+
+            // Add a subtle transition for smoother movement
+            el.style.transition = "transform 0.2s ease-out";
+          });
+        });
+
+        // Toggle mobile menu
+        const menuButton = document.querySelector(".mobile-menu-button");
+        const mobileMenu = document.querySelector(".mobile-menu");
+
+        if (menuButton && mobileMenu) {
+          menuButton.addEventListener("click", function () {
+            mobileMenu.classList.toggle("hidden");
+          });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+              // Close mobile menu if open
+              if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
+                mobileMenu.classList.add("hidden");
+              }
+
+              // Scroll to target with offset for header
+              const headerHeight =
+                document.querySelector("header").offsetHeight;
+              const targetPosition =
+                targetElement.getBoundingClientRect().top +
+                window.pageYOffset -
+                headerHeight;
+
+              window.scrollTo({
+                top: targetPosition,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+
+        // Initialize the moving underline
+        const navLinks = document.querySelectorAll(".nav-link");
+        const navIndicator = document.getElementById("nav-indicator");
+        const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+
+        // Function to position the underline
+        function positionUnderline(link) {
+          if (navIndicator && link) {
+            const linkRect = link.getBoundingClientRect();
+            const navRect = link.parentElement.getBoundingClientRect();
+
+            // Set the width and position of the underline
+            navIndicator.style.width = `${linkRect.width}px`;
+            navIndicator.style.left = `${linkRect.left - navRect.left}px`;
+          }
+        }
+
+        // Highlight active section in navbar based on scroll position
+        const sections = document.querySelectorAll("section[id]");
+
+        function highlightNavOnScroll() {
+          const scrollY = window.pageYOffset;
+          const headerHeight = document.querySelector("header").offsetHeight;
+
+          // Find the current section
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop - headerHeight - 100; // Offset to trigger earlier
+            const sectionBottom = sectionTop + section.offsetHeight;
+            const sectionId = section.getAttribute("id");
+
+            if (scrollY >= sectionTop && scrollY < sectionBottom) {
+              // Remove active class from all links
+              navLinks.forEach((link) => {
+                link.classList.remove("active-nav-link");
+              });
+
+              mobileNavLinks.forEach((link) => {
+                link.classList.remove("active-nav-link");
+              });
+
+              // Add active class to current section link
+              const activeDesktopLink = document.querySelector(
+                `.nav-link[href="#${sectionId}"]`
+              );
+              const activeMobileLink = document.querySelector(
+                `.mobile-nav-link[href="#${sectionId}"]`
+              );
+
+              if (activeDesktopLink) {
+                activeDesktopLink.classList.add("active-nav-link");
+                positionUnderline(activeDesktopLink);
+              }
+
+              if (activeMobileLink) {
+                activeMobileLink.classList.add("active-nav-link");
+              }
+            }
+          });
+        }
+
+        // Initial call to highlight the correct section and position underline on page load
+        highlightNavOnScroll();
+        const initialActiveLink = document.querySelector(
+          ".nav-link.active-nav-link"
+        );
+        if (initialActiveLink) {
+          positionUnderline(initialActiveLink);
+        }
+
+        // Add scroll event listener
+        window.addEventListener("scroll", highlightNavOnScroll);
+
+        // Handle window resize to reposition the underline
+        window.addEventListener("resize", () => {
+          const activeLink = document.querySelector(
+            ".nav-link.active-nav-link"
+          );
+          if (activeLink) {
+            positionUnderline(activeLink);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
