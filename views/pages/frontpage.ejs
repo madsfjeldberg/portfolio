@@ -5,13 +5,14 @@
 >
   <div class="ml-auto w-full md:w-1/2 text-left">
     <h1 class="text-5xl md:text-6xl font-bold mb-6 parallax">
-      <span class="text-accent-500" data-speed="5">Hello!</span>
+      <span id="typewriter-text" class="text-accent-500 typewriter">Hello!</span>
     </h1>
 
     <p class="text-left text-xl text-gray-400 max-w-2xl ml-auto parallax">
       My name is Mads Fjeldberg. I'm a software developer with a passion for
-      building and maintaining web applications. I love learning new
-      technologies and frameworks, and I'm always looking for new challenges.
+      building beautifully simple and maintainable web applications. I love
+      learning new technologies and frameworks, and I'm always looking for new
+      challenges.
       <br />
       <br />
       I'm currently working as IT-Support at
@@ -65,21 +66,20 @@
 
 <!-- Projects Section with hover effects -->
 <section id="projects" class="relative">
-  <div
-    class="absolute -right-20 top-40 w-40 h-40 rounded-full bg-accent-600/5 blur-3xl parallax"
-    data-speed="10"
-  ></div>
-
   <div class="text-center mb-12 parallax">
-    <h2 class="text-3xl font-bold text-accent-500 mb-4 inline-block relative">
+    <h2
+      class="text-3xl font-bold text-accent-500 mb-4 inline-block relative parallax"
+    >
       Previous Projects
     </h2>
     <p class="text-gray-400 max-w-2xl mx-auto"></p>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 parallax"
+  >
     <!-- Project Card 1 -->
-    <div class="group relative parallax" data-speed="8">
+    <div class="group relative">
       <div
         class="bg-dark-800 rounded-lg overflow-hidden h-full flex flex-col border border-dark-600/50 group-hover:border-accent-600/50 transition-all duration-300"
       >
@@ -102,32 +102,33 @@
             A web application for managing and tracking stocks and dividends.
           </p>
           <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-2 py-1 bg-dark-700 text-accent-400 text-xs rounded"
-              >React</span
-            >
-            <span class="px-2 py-1 bg-dark-700 text-accent-400 text-xs rounded"
-              >MySQL</span
-            >
-            <span class="px-2 py-1 bg-dark-700 text-accent-400 text-xs rounded"
-              >MySQL</span
-            >
-            <span class="px-2 py-1 bg-dark-700 text-accent-400 text-xs rounded"
-              >Tailwind CSS</span
-            >
-            <span class="px-2 py-1 bg-dark-700 text-accent-400 text-xs rounded"
-              >shadcn/ui</span
-            >
+            <span class="px-2 py-1 text-accent-400">
+              <i class="fab fa-java"></i>
+            </span>
+            <span class="px-2 py-1 text-accent-400">
+              <i class="fab fa-react"></i>
+            </span>
+            <span class="px-2 py-1 text-accent-400">
+              <i class="fi fi-brands-mysql"></i>
+            </span>
+            <span class="px-2 py-1 text-accent-400">
+              <img
+                src="/icons/tailwind.svg"
+                class="w-6 h-6"
+                alt="Tailwind CSS icon"
+              />
+            </span>
           </div>
           <div class="flex justify-start gap-4">
             <a
               href="https://divex.dk"
-              class="inline-block px-4 py-2 bg-dark-700 text-accent-400 rounded group-hover:bg-accent-900 group-hover:text-accent-200 transition-all duration-300 transform group-hover:scale-105"
+              class="inline-block px-4 py-2 bg-dark-700 text-accent-400 rounded group-hover:bg-accent-900 group-hover:text-accent-200 transition-all duration-300 transform group-hover:scale-105 hover:shadow-[0_0_15px_rgba(249,115,22,0.3)]"
               target="_blank"
               >View Project</a
             >
             <a
               href="https://github.com/madsfjeldberg/DivEx"
-              class="inline-block px-4 py-2 bg-dark-700 text-accent-400 rounded group-hover:bg-accent-900 group-hover:text-accent-200 transition-all duration-300 transform group-hover:scale-105"
+              class="inline-block px-4 py-2 bg-dark-700 text-accent-400 rounded group-hover:bg-accent-900 group-hover:text-accent-200 transition-all duration-300 transform group-hover:scale-105 hover:shadow-[0_0_15px_rgba(249,115,22,0.3)]"
               target="_blank"
               >View Code</a
             >
@@ -137,7 +138,7 @@
     </div>
 
     <!-- Project Card 2 -->
-    <div class="group relative parallax" data-speed="5">
+    <div class="group relative">
       <div
         class="bg-dark-800 rounded-lg overflow-hidden h-full flex flex-col border border-dark-600/50 group-hover:border-accent-600/50 transition-all duration-300"
       >
@@ -160,29 +161,36 @@
             A collection of what i've learned in my Fullstack Node.js course.
           </p>
           <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-2 py-1 bg-dark-700 text-accent-400 text-xs rounded"
-              >Node.js</span
-            >
-            <span class="px-2 py-1 bg-dark-700 text-accent-400 text-xs rounded"
-              >Express</span
-            >
-            <span class="px-2 py-1 bg-dark-700 text-accent-400 text-xs rounded"
-              >ejs</span
-            >
-            <span class="px-2 py-1 bg-dark-700 text-accent-400 text-xs rounded"
-              >Tailwind CSS</span
-            >
+            <span class="px-2 py-1 text-accent-400"
+              ><i class="fab fa-node-js"></i
+            ></span>
+
+            <span class="px-2 py-1 text-accent-400">
+              <img
+                src="/icons/express.svg"
+                class="w-6 h-6"
+                alt="Express.js icon"
+            /></span>
+
+            <span class="px-2 py-1 text-accent-400">ejs</span>
+            <span class="px-2 py-1 text-accent-400">
+              <img
+                src="/icons/tailwind.svg"
+                class="w-6 h-6"
+                alt="Tailwind CSS icon"
+            /></span>
           </div>
+
           <div class="flex justify-start gap-4">
             <a
               href="https://nodeportfolio.thaulow.tech"
-              class="inline-block px-4 py-2 bg-dark-700 text-accent-400 rounded group-hover:bg-accent-900 group-hover:text-accent-200 transition-all duration-300 transform group-hover:scale-105"
+              class="inline-block px-4 py-2 bg-dark-700 text-accent-400 rounded group-hover:bg-accent-900 group-hover:text-accent-200 transition-all duration-300 transform group-hover:scale-105 hover:shadow-[0_0_15px_rgba(249,115,22,0.3)]"
               target="_blank"
               >View Project</a
             >
             <a
               href="https://github.com/madsfjeldberg/NodePortfolio"
-              class="inline-block px-4 py-2 bg-dark-700 text-accent-400 rounded group-hover:bg-accent-900 group-hover:text-accent-200 transition-all duration-300 transform group-hover:scale-105"
+              class="inline-block px-4 py-2 bg-dark-700 text-accent-400 rounded group-hover:bg-accent-900 group-hover:text-accent-200 transition-all duration-300 transform group-hover:scale-105 hover:shadow-[0_0_15px_rgba(249,115,22,0.3)]"
               target="_blank"
               >View Code</a
             >
@@ -192,7 +200,7 @@
     </div>
 
     <!-- Project Card 3 -->
-    <div class="group relative parallax" data-speed="7">
+    <div class="group relative">
       <div
         class="bg-dark-800 rounded-lg overflow-hidden h-full flex flex-col border border-dark-600/50 group-hover:border-accent-600/50 transition-all duration-300"
       >
@@ -218,28 +226,34 @@
           <h3
             class="text-xl font-semibold text-accent-400 mb-2 group-hover:text-accent-300 transition-colors"
           >
-            Project Three
+            Taskminder (Under Development)
           </h3>
           <p class="text-gray-400 mb-4 flex-grow">
-            A brief description of this amazing project and the technologies
-            used.
+            A task management app with geofencing built with React Native and
+            Firebase.
           </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-2 py-1 bg-dark-700 text-accent-400 text-xs rounded"
-              >Angular</span
-            >
-            <span class="px-2 py-1 bg-dark-700 text-accent-400 text-xs rounded"
-              >Firebase</span
-            >
-            <span class="px-2 py-1 bg-dark-700 text-accent-400 text-xs rounded"
-              >Tailwind</span
+          <div class="flex flex-wrap gap-2 mb-4 items-center">
+            <span class="px-2 py-1 text-accent-400"
+              ><i class="fab fa-react"></i
+            ></span>
+            <span class="px-2 py-1 text-accent-400"
+              ><img
+                src="/icons/firebase.svg"
+                class="w-4 h-4"
+                alt="Firebase icon"
+            /></span>
+            <span class="px-2 py-1 text-accent-400"
+              ><img src="/icons/expo.svg" class="w-4 h-4" alt="Expo icon"
+            /></span>
+          </div>
+          <div class="flex justify-start gap-4">
+            <a
+              href="https://github.com/madsfjeldberg/Taskminder"
+              class="inline-block px-4 py-2 bg-dark-700 text-accent-400 rounded group-hover:bg-accent-900 group-hover:text-accent-200 transition-all duration-300 transform group-hover:scale-105 hover:shadow-[0_0_15px_rgba(249,115,22,0.3)]"
+              target="_blank"
+              >View Code</a
             >
           </div>
-          <a
-            href="#"
-            class="inline-block px-4 py-2 bg-dark-700 text-accent-400 rounded group-hover:bg-accent-900 group-hover:text-accent-200 transition-all duration-300 transform group-hover:-translate-y-1"
-            >View Project</a
-          >
         </div>
       </div>
     </div>
@@ -261,7 +275,6 @@
     </h2>
 
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-      
       <!-- Skill Card 1 -->
       <div
         class="group bg-dark-800 p-5 rounded-lg text-center border border-dark-600/50 hover:border-accent-600/30 transition-all duration-300 hover:shadow-lg hover:shadow-accent-900/10 transform hover:-translate-y-1"
@@ -277,7 +290,6 @@
         </h3>
       </div>
 
-      
       <!-- Skill Card 2 -->
       <div
         class="group bg-dark-800 p-5 rounded-lg text-center border border-dark-600/50 hover:border-accent-600/30 transition-all duration-300 hover:shadow-lg hover:shadow-accent-900/10 transform hover:-translate-y-1"
@@ -402,57 +414,89 @@
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="py-20 relative min-h-screen">
-  <div
-    class="absolute -right-20 bottom-20 w-40 h-40 rounded-full bg-accent-600/5 blur-3xl parallax"
-    data-speed="15"
-  ></div>
-
+<section id="contact" class="py-20 relative parallax">
   <div class="text-center mb-12">
     <h2 class="text-3xl font-bold text-accent-500 mb-4 inline-block relative">
-      Get In Touch
-      <div
-        class="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-accent-600 rounded-full"
-      ></div>
+      Contact
     </h2>
     <p class="text-gray-400 max-w-2xl mx-auto">
-      Have a project in mind or just want to say hello? Feel free to reach out!
+      Still curious about me? Check out my CV!
     </p>
   </div>
 
-  <div class="max-w-2xl mx-auto">
+  <div class="max-w-2xl mx-auto mb-12">
     <div
       class="bg-dark-800 rounded-lg p-6 border border-dark-600/50 shadow-lg parallax"
-      data-speed="4"
     >
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <div>
-          <label class="block text-gray-400 mb-2">Name</label>
-          <input
-            type="text"
-            class="w-full bg-dark-700 border border-dark-600 rounded-md px-4 py-2 text-gray-200 focus:outline-none focus:border-accent-500 transition-colors"
-          />
-        </div>
-        <div>
-          <label class="block text-gray-400 mb-2">Email</label>
-          <input
-            type="email"
-            class="w-full bg-dark-700 border border-dark-600 rounded-md px-4 py-2 text-gray-200 focus:outline-none focus:border-accent-500 transition-colors"
-          />
-        </div>
-      </div>
-      <div class="mb-6">
-        <label class="block text-gray-400 mb-2">Message</label>
-        <textarea
-          rows="4"
-          class="w-full bg-dark-700 border border-dark-600 rounded-md px-4 py-2 text-gray-200 focus:outline-none focus:border-accent-500 transition-colors"
-        ></textarea>
-      </div>
-      <button
-        class="w-full bg-accent-600 text-white py-3 rounded-md hover:bg-accent-700 transition-colors shadow-lg hover:shadow-accent-900/20"
+      <span
+        id="toggleText"
+        class="flex text-gray-400 justify-center items-center mb-2 gap-1"
       >
-        Send Message
-      </button>
+        <span id="togglePrefix" class="transition-opacity duration-300"
+          >Without</span
+        >
+        <span>Picture</span>
+      </span>
+      <div class="flex items-center justify-center mb-6">
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" value="" class="sr-only peer" id="picToggle" />
+          <div
+            class="w-11 h-6 bg-dark-700 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-accent-600/20 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-accent-500"
+          ></div>
+        </label>
+      </div>
+      <div class="flex justify-center">
+        <a
+          id="cvLink"
+          href="/docs/CV-2025 P V3.pdf"
+          class="inline-block px-6 py-3 bg-dark-700 text-accent-400 rounded-lg hover:bg-accent-900 hover:text-accent-200 transition-all duration-300 transform hover:scale-105 font-semibold"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="far fa-file-pdf mr-2"></i>
+          View CV
+        </a>
+      </div>
     </div>
   </div>
+
+  <p class="text-gray-400 max-w-2xl mx-auto text-center">Or send me a mail:</p>
+  <div class="flex justify-center mt-6">
+    <a
+      href="mailto:madsfjelle@gmail.com"
+      class="inline-block px-6 py-3 bg-dark-700 text-accent-400 rounded-lg hover:bg-accent-900 hover:text-accent-200 transition-all duration-300 transform hover:scale-105 font-semibold"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="far fa-envelope mr-2"></i>
+      Email
+    </a>
+  </div>
 </section>
+
+<script>
+  // Handle CV toggle switch
+  const toggleSwitch = document.getElementById("picToggle");
+  const togglePrefix = document.getElementById("togglePrefix");
+
+  toggleSwitch.addEventListener("change", function () {
+    // Fade out
+    togglePrefix.style.opacity = "0";
+
+    // Wait for fade out, then change text and fade in
+    setTimeout(() => {
+      togglePrefix.textContent = this.checked ? "With" : "Without";
+      togglePrefix.style.opacity = "1";
+    }, 150); // Half of the transition duration
+
+    const cvLink = document.getElementById("cvLink");
+    if (this.checked) {
+      cvLink.href = "/docs/CV-2025 P V3.pdf";
+    } else {
+      cvLink.href = "/docs/CV-2025 noP V3.pdf";
+    }
+  });
+
+  // Toggle mobile menu
+  const menuButton = document.querySelector(".mobile-menu-button");
+</script>

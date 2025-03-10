@@ -61,6 +61,7 @@ html {
   will-change: transform;
   transform-style: preserve-3d;
   backface-visibility: hidden;
+  transition: none !important;
 }
 
 /* Float animation */
@@ -165,4 +166,23 @@ section + section {
 
 #contact.is-visible {
   transition-delay: 0.4s;
+}
+
+/* Typewriter cursor effect */
+.typewriter::after {
+  content: "_";
+  border-bottom: 2px solid currentColor;
+  margin-left: 2px;
+  display: inline-block;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }

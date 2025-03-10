@@ -11,9 +11,18 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <!-- Flaticon Icons -->
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
   </head>
   <body
     class="bg-dark-950 text-gray-200 min-h-screen flex flex-col relative overflow-x-hidden"
@@ -128,8 +137,8 @@
             // Apply the transform
             el.style.transform = `translate3d(${x}px, ${y}px, 0) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
 
-            // Add a subtle transition for smoother movement
-            el.style.transition = "transform 0.2s ease-out";
+            // Remove the transition for instant movement
+            el.style.transition = "none";
           });
         });
 
@@ -199,7 +208,7 @@
 
           // Find the current section
           sections.forEach((section) => {
-            const sectionTop = section.offsetTop - headerHeight - 100; // Offset to trigger earlier
+            const sectionTop = section.offsetTop - headerHeight - 500; // Offset to trigger earlier
             const sectionBottom = sectionTop + section.offsetHeight;
             const sectionId = section.getAttribute("id");
 
@@ -254,6 +263,29 @@
             positionUnderline(activeLink);
           }
         });
+      });
+    </script>
+
+    <script>
+      // Typewriter effect for "Hello!" text
+      document.addEventListener("DOMContentLoaded", function () {
+        const typewriterElement = document.getElementById("typewriter-text");
+        if (!typewriterElement) return;
+
+        const text = "Hello!";
+        let i = 0;
+        typewriterElement.textContent = "";
+
+        function typeNextChar() {
+          if (i < text.length) {
+            typewriterElement.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeNextChar, 150);
+          }
+        }
+
+        // Start typing after a short delay
+        setTimeout(typeNextChar, 600);
       });
     </script>
   </body>
