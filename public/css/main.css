@@ -171,7 +171,6 @@ section + section {
 /* Typewriter cursor effect */
 .typewriter::after {
   content: "_";
-  border-bottom: 2px solid currentColor;
   margin-left: 2px;
   display: inline-block;
   animation: blink 0.7s infinite;

@@ -3,6 +3,10 @@ export default {
   content: ["./views/**/*.ejs", "./public/**/*.{html,js}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Roboto Condensed", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
+      },
       colors: {
         dark: {
           950: "#0a0a0a",
