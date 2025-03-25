@@ -56,7 +56,7 @@ app.get("/", (req, res) => {
   // log current time
   let currentTime = new Date().toLocaleTimeString();
   let currentDate = new Date().toLocaleDateString();
-  console.log("");
+  console.log();
   console.log(req.ip);
   console.log(currentDate);
   console.log(currentTime);
